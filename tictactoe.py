@@ -1,5 +1,7 @@
 # The following is a simple game of tic tac toe for two players coded in Python.
 
+import random
+
 def display_board(board):
     print(board[0] + "|" + board[1] + "|" + board[2])
     print("-----")
@@ -46,3 +48,10 @@ def win_check(board, mark):
         return True
     else:
         return False
+
+def choose_first():
+    player_to_start = random.randint(1, 2)
+    if (player_to_start == 1):
+        return "Player 1"
+    else:
+        return "Player 2"
