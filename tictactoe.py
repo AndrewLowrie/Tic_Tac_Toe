@@ -7,5 +7,15 @@ def display_board(board):
     print("-----")
     print(board[2][0] + "|" + board[2][1] + "|" + board[2][2])
 
-test_board = [ ['1', '2', '3'] , ['4', '5', '6'] , ['7', '8', '9'] ]
-display_board(test_board)
+def player_input():
+    player1 = ''
+
+    # To ensure the player only chooses a valid marker.
+    while (player1 != "X") and (player1 != "O"):
+        player1 = input("Please choose 'X' or 'O': " )
+
+    # Setting player two's marker.
+    if (player1 == "X"):
+        player2 = "O"
+    else:
+        player2 = "X"
