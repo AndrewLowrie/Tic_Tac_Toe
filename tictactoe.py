@@ -1,11 +1,11 @@
 # The following is a simple game of tic tac toe for two players coded in Python.
 
 def display_board(board):
-    print(board[0][0] + "|" + board[0][1] + "|" + board[0][2])
+    print(board[0] + "|" + board[1] + "|" + board[2])
     print("-----")
-    print(board[1][0] + "|" + board[1][1] + "|" + board[1][2])
+    print(board[3] + "|" + board[4] + "|" + board[5])
     print("-----")
-    print(board[2][0] + "|" + board[2][1] + "|" + board[2][2])
+    print(board[6] + "|" + board[7] + "|" + board[8])
 
 def player_input():
     player1 = ''
@@ -19,3 +19,10 @@ def player_input():
         player2 = "O"
     else:
         player2 = "X"
+
+    return (player1, player2)
+
+def place_marker(board, marker, position):
+    position -= 1
+    board[position] = marker
+    return board
