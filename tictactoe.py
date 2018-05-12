@@ -3,11 +3,13 @@
 import random
 
 def display_board(board):
+    print(' ')
     print(board[0] + "|" + board[1] + "|" + board[2])
     print("-----")
     print(board[3] + "|" + board[4] + "|" + board[5])
     print("-----")
     print(board[6] + "|" + board[7] + "|" + board[8])
+    print(' ')
 
 def player_input():
     player1 = ''
@@ -27,7 +29,6 @@ def player_input():
 def place_marker(board, marker, position):
     position -= 1
     board[position] = marker
-    return board
 
 def win_check(board, mark):
     if (mark == board[0] and mark == board[1] and mark == board[2]):
@@ -50,14 +51,20 @@ def win_check(board, mark):
         return False
 
 def choose_first():
-    player_to_start = random.randint(1, 2)
-    if (player_to_start == 1):
-        return "Player 1"
+    marker_to_start = random.randint(1, 2)
+    if (marker_to_start == 1):
+        return "X"
     else:
-        return "Player 2"
+        return "O"
 
 def space_check(board, position):
     return (board[position] == " ")
+
+def full_board_check:
+    for index in range(0, 9):
+        if space_check(board, index):
+            return False
+    return True
 
 def replay():
     choice = input("Do you want to play again? Y/N: ")
