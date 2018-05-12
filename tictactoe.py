@@ -58,3 +58,7 @@ def choose_first():
 
 def space_check(board, position):
     return (board[position] == " ")
+
+def replay():
+    choice = input("Do you want to play again? Y/N: ")
+    return (choice == "Y")
