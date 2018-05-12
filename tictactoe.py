@@ -66,6 +66,14 @@ def full_board_check:
             return False
     return True
 
+def player_choice(board):
+    accepted_choice = False
+    while accepted_choice == False:
+        position = int(input("Please enter your next position"))
+        if (space_check(board, position))
+            accepted_choice = True
+            return position
+
 def replay():
     choice = input("Do you want to play again? Y/N: ")
     return (choice == "Y")
